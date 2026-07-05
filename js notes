@@ -1,0 +1,234 @@
+mern stack:
+day 1 notes:
+
+  when we want to print the line in java script we use
+console.log("Hello World!")
+we should take the js code put it inside the html file.only the its execute. so how to link the js file in html file.
+we should use the script tag inside the html file.
+Programming language called two types
+1)complied programming language - c language.
+2)interpreted language - js language,hybrid lanugae also.
+1)complied programming language: a compliled programming language is the such a language. which is converts 
+all the high level instructions into meachine level in one short.
+2)interpreted language:it will takes high level.the name of the software is only called as interpreted.
+it will take the only one line and execute the high level and send to the microprocessor.
+again microprocessor controls give to interpreted again another line converts into meachine 
+level.(the process is repating).
+js programming language also on the web.
+
+Day 2 notes:
+Different ways execute in java script:
+1)head
+2)body
+3)external file
+inside head:
+<script>console.log("hello world!")</script> 
+inside bosy:
+put it all html tag. last line we should write.
+<script>console.log("inside body")</script>
+external file;
+create seperate js file. and write a code. and go to the html file and link the 
+js file.link the inside the body.for example.
+<script src="test.js"></script>
+Data types in java scripts:
+java script is dynamically typed programming language.which duraing 
+execution will automatically decide the type of the variable.
+we called its under 3 words.
+a)Var b)let c)const-(dont use it var)
+ex : 
+let a = 22;
+console.log(a);
+console.log(typeof a);type of its a operator. 
+* In java script if we attcahed the long number we sholud put 
+"n" in the last number. 
+for ex: let a = 12345632458974526321456631n;->this is tecnically called as Bignet data type.
+1)Number
+2)BigInt
+3)String
+4)Boolean
+5)Undefined- A variable which has not been initialized will automatically given
+the value by java script called as undefined.
+6)Null- its default value of the reference.
+7)symbol-
+Type Coercion:
+1)Implicit Type Coercion- automatically type change with js.
+false is 0.true is 1.(its applicable boolean to number data type)
+null is 0 .
+Nan- Not an number.(undefined to number type)
+2)Explicit Type Coercion- programmer should give type its called as explicit type Coercion
+Build in function:Number();
+syntax:number(numstr)  
+
+let numToStr:(build in function is String)
+console.log(numTostr);
+console.log(tyepof numTostr)
+*in boolean type 0 is false and any non value of 0 is true.
+
+two functions
+what ever we have writtencode which is outside the functionin javascript
+will automatically put it inside the globel excution concert(GCE)
+
+Day 3 notes:
+    Comparison operator:
+basic comparison operation- <,>,<=,>=
+Equality operator - ==,===,!=,!==.
+== value is qual
+===value and type also equal(strict equlity operator)
+* empty string converted into boolean is false
+* non empty string converted into boolean is true.
+
+Strings:Series of characters inside double codes.strings are only one type in js.
+1)Immutable string-once we created the strings we cant chage it value.
+Difference ways to create strings in java script.
+1)let s1 = "Tap Academy";
+2)let s2 = "Java Script";
+3)let s3 =  'MERN';- backticks
+
+Different ways to compare strings.
+*compares to values.
+
+template literals:
+let name = "Preethi";
+let age = "29";
+let s = `name is ${name}. age is ${age}`;
+console.log(s);
+
+Built in methords in strings:
+ strings are objects.js lenth is a varaible.its object.
+ let str = "java script";
+ *console.log.(str.lenth);
+ *console.log.(str[4]);
+ *console.log.(str.charAt[4]);
+ *console.log.(str.indexof('s'));
+ *console.log.(str.uppercase());
+ *console.log.(str.lowercase());
+ *console.log.(str.replace("va","VA"));
+ *console.log.(str.startswith("java"));
+ *console.log.(str.endswith("ipt"));
+
+ day 4 notes: HOISTING
+ declaration: var a;
+ initialization: a = 100;
+ we combined both; var a = 100;
+ hoisting: putting something bottom to top is hoisting.
+ hoisting is the process of taking the all variable declarations and 
+ putting it on top. (ONLY DECLARATION)
+ var a;
+ console.log(a);
+ a=200;
+ console.log(a); -> this is the java script hoisting the code.
+
+ what is the differnce between var and let:
+ * var is automatically initialized with undefined.
+ * let is not automatically initialized with undefined.(empty)
+ * var keyword no concept of tdc.
+ * let  keyword concept of tdc
+ TDC-Temporal dead zone.- it is that area of program in which a let keyword varaiable cannot be
+ accessed. because it has not been initialized. 
+  java script also called as functional programming language also.
+   FUNCTIONS:
+   Functions should have 4 things.
+   output name (input)
+   {
+    activity
+   }
+
+* in java script functions starts with function keyword.
+  syntax:
+  function add(a,b);
+  {
+    let c = a+b;
+    return c;
+
+  }
+
+  hoisting also happen with finction declaration also.
+  *functions is treated as an object.
+
+  DAY 5 NOTES:
+ scope- The regin in the program where can be access.
+var have a function scope. it is such a varaiable which its hoisted.till the top the scope
+inside the function.
+*let have block scope.
+arrow function:
+syntax
+let add = (a,b) =>
+{
+  console.log.(a+b);
+
+}
+add(100,200);
+
+another way to write arrow function.
+let add = (a,b) => console.log.(a+b);
+add(100,200);
+ * remove keyword called function.
+ *if have one statement dont put brackets.({})
+
+DAY 6 NOTES:
+
+model function;
+*alret(Hello);
+*confirm("did you have your lunch?);
+*prompt("enter your age:");
+
+How to create a object in js
+object of java script is  collection of property value pairs.
+everything inside object is property value pairs.
+1. Object Literal
+let car1={
+   name:"Maruthi",
+   cost:12.6,
+   noofseats:5
+}
+console.log(car1.name);
+console.log(car1.cost);
+console.log(car1.noofseats);
+
+another way write objects:
+
+console.log(car1['name']);
+console.log(car1['cost']);
+console.log(car1['noofseats']);
+
+add new object here the code:
+car1.color-"gray";
+
+delete the object here the code:
+delete car1.cost;
+
+start: function(){
+  console.log("car is starting");
+},
+accelerate: fucntion(){
+  console.log('${this.name}is starting');
+} 
+
+car1.start();
+car1.accelerate();
+
+nested object:object inside the object.
+
+let car1 = {
+   name:"Maruthi",
+   cost:12.6,
+   noofseats:5
+
+  owner:
+    name::priya",
+    age:28,
+    phone:9566145870
+  } 
+* function in java script also objects.
+
+
+DAY 7 NOTES:
+* functions are nothing but in java script.
+function add(a,b,c)
+{
+console.log  (a+b+c)
+}
+* functions are first calss citizions.
+*function can be the inside the function.
+
+DAY 8 NOTES:
